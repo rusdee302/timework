@@ -1,0 +1,25 @@
+โหลดโปรเจ็คตั้งใน xampp/htdoc/
+- composer update
+- npm install
+
+--------------------------------------------------------------
+import database 
+- ตั้งชื่อฐานข้อมูล check_time_work
+
+-------------------------------------------------------------
+ไฟล์ env ใส่ชื่อฐานข้อมูล 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=check_time_work
+DB_USERNAME=root
+DB_PASSWORD=
+
+- php artisan key:generate
+
+--------------------------------------------------------------
+- php artisan migrate
+
+
+
+
