@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img_bg {
+    background-image: url("http://192.168.17.175/ScanCheckTimeWork/img/logo/emp_card1.png");
+    background-size: 100% 100%;
+}
+
+/*  */
+
+* {                                                                                              
+    box-sizing: border-box;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+/* -------------- */
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url(http://i.imgur.com/K3mPv14.jpg);
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+    background-image: url(http://i.imgur.com/emvhOnb.jpg);
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+    animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
+
+/* ------------------ not --------------- */
+#oopss {
+    background: linear-gradient(-45deg, #c56fc1, #c56fc1);
+    position: fixed;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5em;
+    z-index: 9999;
+}
+
+#oopss #error-text {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Shabnam', Tahoma, sans-serif;
+    color: #000;
+    direction: rtl;
+}
+
+#oopss #error-text img {
+    margin: 85px auto 20px;
+    height: 342px;
+}
+
+#oopss #error-text span {
+    position: relative;
+    font-size: 3.3em;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+#oopss #error-text p.p-a {
+    font-size: 19px;
+    margin: 30px 0 15px 0;
+}
+
+#oopss #error-text p.p-b {
+    font-size: 15px;
+}
+
+#oopss #error-text .back {
+    background: #fff;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 2em auto 0;
+    padding: .7em 2em;
+    border-radius: 500px;
+    box-shadow: 0 20px 70px 4px rgba(0, 0, 0, 0.1), inset 7px 33px 0 0px #fff300;
+    font-weight: 900;
+    transition: all 300ms ease;
+}
+
+#oopss #error-text .back:hover {
+    -webkit-transform: translateY(-13px);
+    transform: translateY(-13px);
+    box-shadow: 0 35px 90px 4px rgba(0, 0, 0, 0.3), inset 0px 0 0 3px #000;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.eot");
+    src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.eot?#iefix") format("embedded-opentype"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.woff") format("woff"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.woff2") format("woff2"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.eot");
+    src: url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.eot?#iefix") format("embedded-opentype"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.woff") format("woff"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.woff2") format("woff2"), url("https://cdn.rawgit.com/ahmedhosna95/upload/ba6564f8/fonts/Shabnam/Shabnam.ttf") format("truetype");
+    font-weight: normal;
+}
+
+/*  */
+#example1 {
+    padding: 46px;
+    background: linear-gradient(0deg, rgba(32, 7, 7, 0.3), rgba(255, 0, 150, 0.3)), url('https://timework.sif.co.th/video/AG9U0053.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
